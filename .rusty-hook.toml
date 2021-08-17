@@ -1,0 +1,7 @@
+[hooks]
+pre-commit = "cargo test && cargo fmt -- --check"  # this check little 
+pre-push   = "cargo clippy -- -D warnings"         # 'cargo clippy' contains 'cargo check', this check more
+
+
+[logging]
+verbose = true
