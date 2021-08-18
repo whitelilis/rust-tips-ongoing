@@ -30,5 +30,6 @@ mod test {
         for m in src.into_iter() {
             dst.push(m);
         }
+        println!("{:?}", 3);
     }
 }
