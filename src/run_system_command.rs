@@ -4,8 +4,9 @@ mod test {
 
     #[test]
     fn run_system_cmd() {
-        let output = Command::new("/usr/bin/touch")
-            .arg("/tmp/file.txt")
+        let output = Command::new("/bin/sh")
+            .arg("-c")
+            .arg("python3 /tmp/aaa/main.py")
             .output()
             .expect("failed to execute process");
 
