@@ -1,6 +1,7 @@
 #[cfg(test)]
 mod test {
 
+    #[allow(dead_code)]
     struct Big {
         m1: String,
         m2: String,

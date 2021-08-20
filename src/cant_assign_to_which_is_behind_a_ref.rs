@@ -1,5 +1,6 @@
 #[cfg(test)]
 mod test {
+    #[allow(dead_code)]
     use crate::cant_assign_to_which_is_behind_a_ref::test::RunningStatus::Pending;
     use std::collections::HashMap;
 
