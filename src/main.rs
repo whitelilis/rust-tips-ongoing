@@ -1,3 +1,4 @@
+mod add_docs;
 mod cant_assign_to_which_is_behind_a_ref;
 mod cant_borrow_data_from_ref_as_mutable;
 mod enum_compare;
