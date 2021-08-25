@@ -1,3 +1,4 @@
+use std::borrow::BorrowMut;
 use std::collections::{HashMap, HashSet};
 use std::sync::{Arc, Mutex};
 
@@ -31,5 +32,6 @@ fn _hash_check_exists_or_insert(arc: Arc<Mutex<Manager>>, task: &Task) {
         .job_task_map
         .entry(task.job_id.clone())
         .or_insert(HashSet::new())
+        .borrow_mut()
         .insert(task.task_id.clone());
 }
