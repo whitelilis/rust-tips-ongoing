@@ -7,7 +7,9 @@ mod mv_between_collection;
 mod run_system_command;
 mod subtle_index;
 mod tokio_test;
+pub mod types;
 mod using_method_in_trait;
+mod using_var_many_times;
 
 use std::sync::Arc;
 
