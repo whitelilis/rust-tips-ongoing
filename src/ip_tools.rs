@@ -1,4 +1,3 @@
-use std::fmt::Debug;
 use std::io::Error;
 use std::net::UdpSocket;
 
@@ -7,6 +6,7 @@ use std::net::UdpSocket;
 ///
 ///
 
+#[allow(dead_code)]
 pub fn get_outer_ip() -> Result<String, Error> {
     let socket = UdpSocket::bind("0.0.0.0:0")?;
     socket.connect("114.114.114.114:80")?;
@@ -22,6 +22,7 @@ pub fn get_outer_ip() -> Result<String, Error> {
 ///
 ///
 
+#[allow(dead_code)]
 pub fn is_my_ip(ip: &str) -> bool {
     UdpSocket::bind(format!("{}:0", ip)).is_ok()
 }
