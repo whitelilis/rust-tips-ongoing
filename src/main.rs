@@ -2,6 +2,7 @@ mod add_docs;
 mod cant_assign_to_which_is_behind_a_ref;
 mod cant_borrow_data_from_ref_as_mutable;
 mod enum_compare;
+mod ip_tools;
 mod many_loop_in_tokio;
 mod mv_between_collection;
 mod run_system_command;
