@@ -1,6 +1,3 @@
-use crate::types::Bigger;
-use std::collections::HashMap;
-
 ///
 /// Collections as Vec/HashMap/HashSet and so on, both provided  get() and get_mut()
 /// '&' is equal to 'borrow()', just a syntax sugar.
@@ -11,6 +8,8 @@ use std::collections::HashMap;
 
 #[test]
 fn borrow_into() {
+    use crate::types::Bigger;
+    use std::collections::HashMap;
     let mut x1: HashMap<String, Bigger> = HashMap::new();
 
     x1.insert("he".to_string(), Bigger::default());
