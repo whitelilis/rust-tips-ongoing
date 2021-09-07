@@ -12,6 +12,7 @@ mod tokio_test;
 pub mod types;
 mod using_method_in_trait;
 mod using_var_many_times;
+mod ws_client;
 
 use std::sync::Arc;
 

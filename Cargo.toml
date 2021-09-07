@@ -7,3 +7,4 @@ edition = "2018"
 
 [dependencies]
 tokio = { version = "0.2.25", features = ["full"] }
+websocket = "0.26.2"
