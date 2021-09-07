@@ -2,10 +2,13 @@ use websocket::{ClientBuilder, Message};
 use websocket::client::sync::Client;
 use std::net::TcpStream;
 
+
+///
+/// This code snippet is for test websocket and jedi-language-server for python
+
 #[test]
 fn ws_client_test(){
     let uri = "ws://127.0.0.1:7777";
-    //let uri = "ws://117.50.22.77:7777";
     let mut client = ClientBuilder::new(uri)
         .unwrap()
         .connect_insecure()
