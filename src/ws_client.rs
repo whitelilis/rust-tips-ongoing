@@ -4,8 +4,8 @@ use std::net::TcpStream;
 
 #[test]
 fn ws_client_test(){
-    //let uri = "ws://127.0.0.1:7777";
-    let uri = "ws://117.50.22.77:7777";
+    let uri = "ws://127.0.0.1:7777";
+    //let uri = "ws://117.50.22.77:7777";
     let mut client = ClientBuilder::new(uri)
         .unwrap()
         .connect_insecure()
@@ -33,12 +33,11 @@ r#"{"jsonrpc":"2.0","method":"textDocument/didChange","params":{"textDocument":{
         println!("{}", message);
         let m = Message::text(String::from(message));
         client.send_message(&m).unwrap();
-        recv_loop(&mut client);
+        handle_recv(&mut client);
     }
 }
 
-fn recv_loop(client: &mut Client<TcpStream>) {
-    //loop {
+fn handle_recv(client: &mut Client<TcpStream>) {
     println!("<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<");
     match client.recv_message() {
         Ok(m) => {
@@ -49,5 +48,4 @@ fn recv_loop(client: &mut Client<TcpStream>) {
             return;
         }
     };
-    //}
 }
